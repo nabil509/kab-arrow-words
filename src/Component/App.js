@@ -123,7 +123,8 @@ class App extends React.Component {
                     <Chrono ref={this.chronoElement} />
 
                     <button className="general"
-                            onClick={this.handleCheckClick}>
+                            onClick={this.handleCheckClick}
+                            disabled={this.state.status === GridSatuses.solved}>
                         <span className="icon tick">Senqed</span>
                     </button>
                     <Dialog show={this.state.showResult}
