@@ -1,0 +1,4 @@
+.settings/**
+.project
+.buildpath
+node_modules/**
