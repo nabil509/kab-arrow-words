@@ -1,5 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   entry: "./src/index.js",
@@ -19,6 +20,20 @@ module.exports = {
     path: path.resolve(__dirname, 'assets/'),
     publicPath: "/assets/",
     filename: "bundle.js"
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new TerserPlugin({
+        test: /\.js(\?.*)?$/i,
+        extractComments: false,
+        terserOptions: {
+          output: {
+            comments: false,
+          }
+        }
+      })
+    ]
   },
   devServer: {
     host: "localhost",
