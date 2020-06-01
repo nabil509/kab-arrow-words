@@ -176,6 +176,7 @@ button.general:active {
 }
 
 .let {
+    font-size: 18px;
     cursor: pointer;
 }
 
@@ -217,15 +218,15 @@ button.general:active {
 }
 
 .text-1-1 {
-    height: 100%;
+    height: 99%;
 }
 
 .text-1-2 {
-    height: 50%;
+    height: 49%;
 }
 
 .text-1-3 {
-    height: 33%;
+    height: 32%;
 }
 
 .dir {
@@ -265,8 +266,23 @@ button.general:active {
 }
 
 .selected {
-    background-color: rgba(187,239,253,0.3);
+    border: solid 2px red;
+    background-color: rgba(187,239,253);
     cursor: default;
+    position: absolute;
+}
+
+.selected input {
+    background: none;
+    border: none;
+    height: 56px;
+    width: 56px;
+    text-align: center;
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
 }
 
 .footer {

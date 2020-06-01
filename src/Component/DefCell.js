@@ -42,7 +42,6 @@ export default class DefCell extends React.Component {
             return (<div className={textClass} key={index}>{def}<span className={dirClass}>{this.convertArrow(dir)}</span></div>);
         });
 
-
         return (
             <div className="cell def">{defs}</div>
         );

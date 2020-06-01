@@ -6,6 +6,24 @@
  * @license   http://www.gnu.org/licenses/gpl.html GNU General Public License (GPL v3)
  */
 
+if (! String.prototype.startsWith) {
+    Object.defineProperty(String.prototype, 'startsWith', {
+        value: function(search, rawPos) {
+            var pos = rawPos > 0 ? rawPos|0 : 0;
+            return this.substring(pos, pos + search.length) === search;
+        }
+    });
+}
+
+if (! Array.prototype.includes) {
+    Object.defineProperty(Array.prototype, 'includes', {
+        value: function(search, rawPos) {
+            var start = rawPos > 0 ? rawPos|0 : 0;
+            return this.indexOf(search, start) !== -1;
+        }
+    });
+}
+
 const EXTENDED_ALPHABET = [
     'A', 'Ɛ', 'B', 'C', 'Č', 'D', 'Ḍ', 'E', 'F', 'G', 'Ǧ', 'H',
     'Ḥ', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Ɣ', 'Q', 'R',
@@ -13,16 +31,8 @@ const EXTENDED_ALPHABET = [
 ];
 
 const MAPPING = {
-    E: 'Ɛ',
-    C: 'Č',
-    D: 'Ḍ',
-    G: 'Ǧ',
-    H: 'Ḥ',
-    Q: 'Ɣ',
-    R: 'Ṛ',
-    S: 'Ṣ',
-    T: 'Ṭ',
-    Z: 'Ẓ'
+    E: 'Ɛ', C: 'Č', D: 'Ḍ', G: 'Ǧ', H: 'Ḥ',
+    Q: 'Ɣ', R: 'Ṛ', S: 'Ṣ', T: 'Ṭ', Z: 'Ẓ'
 };
 
 export function isLetter(char) {
@@ -42,7 +52,9 @@ export function toSpecial(char) {
 }
 
 export function formatTime(seconds) {
-    return Math.floor(seconds / 3600) + ':' + lpad(Math.floor((seconds % 3600) / 60), 2) + ':' + lpad(Math.floor(seconds % 3600 % 60), 2);
+    return Math.floor(seconds / 3600) + ':'
+        + lpad(Math.floor((seconds % 3600) / 60), 2) + ':'
+        + lpad(Math.floor(seconds % 3600 % 60), 2);
 }
 
 export function formatUserTime(seconds) {
@@ -74,9 +86,18 @@ export function lpad(number, length) {
     return str;
 }
 
-export function unselectAllCells() {
-    var elts = document.querySelectorAll('.cell.let');
-    elts.forEach(function (item) {
-        item.classList.remove('selected');
-    });
+export function offset(elt) {
+    var rect = elt.getBoundingClientRect(),
+    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+}
+
+export function triggerClick(id) {
+    const elt = document.getElementById(id);
+
+    if (elt) {
+        elt.click();
+    }
 }

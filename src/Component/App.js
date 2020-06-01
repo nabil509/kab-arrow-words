@@ -6,7 +6,6 @@
  * @license   http://www.gnu.org/licenses/gpl.html GNU General Public License (GPL v3)
  */
 import React from "react";
-import {hot} from "react-hot-loader";
 import Grid, { GridSatuses } from "./Grid";
 import Chrono from "./Chrono";
 import Dialog from "./Dialog";
@@ -31,6 +30,7 @@ class App extends React.Component {
         this.handleCheckClick = this.handleCheckClick.bind(this);
         this.handleSolveClick = this.handleSolveClick.bind(this);
         this.handleResetClick = this.handleResetClick.bind(this);
+        this.startPlaying = this.startPlaying.bind(this);
     }
 
     handleCheckClick() {
@@ -59,9 +59,11 @@ class App extends React.Component {
         this.setState({ confirmReset: false, status: GridSatuses.initial });
     }
 
-    render() {
-        const ordinal = this.props.index === 0 ? 'amenzu' : ('wis ' + (this.props.index + 1));
+    startPlaying() {
+        this.setState({ status: GridSatuses.playing });
+    }
 
+    render() {
         const helpButtons = [{
             label: 'Mdel',
             iconCls: 'cross',
@@ -96,7 +98,7 @@ class App extends React.Component {
 
         return (
             <div className="app">
-                <h2 className="title">Awalen ineccaben: urar {ordinal}</h2>
+                <h2 className="title">AWALEN S YINECCABEN Ṭ° {this.props.index + 1}</h2>
 
                 <div className="actions">
                     <button className="general" onClick={ () => this.setState({ showHelp: true }) }>
@@ -161,14 +163,17 @@ class App extends React.Component {
                             title="Asfaḍ"
                             buttons={resetButtons}
                             onClose={() => this.setState({ confirmReset: false })}>
-                        D tidett tebɣiḍ ad tsefḍeḍ akk ayen i turiḍ?
+                        D tidet tebɣiḍ ad tsefḍeḍ akk ayen i turiḍ?
                     </Dialog>
                 </div>
 
-                <Grid data={this.props.data} status={GridSatuses.initial} ref={this.gridElement} />
+                <Grid data={this.props.data}
+                      status={GridSatuses.initial}
+                      ref={this.gridElement}
+                      onStartPlaying={this.startPlaying} />
             </div>
         );
     }
 }
 
-export default hot(module)(App);
+export default App;

@@ -8,7 +8,7 @@
 
 import React from "react";
 import Row from "./Row";
-import { unselectAllCells } from "../tools";
+import CellEditor from "./CellEditor";
 
 export default class Grid extends React.Component {
     constructor(props) {
@@ -19,14 +19,24 @@ export default class Grid extends React.Component {
             status: props.status
         };
 
-        this.handleCellEdit = this.handleCellEdit.bind(this);
+        this.editorElement = React.createRef();
+
         this.handleCellClick = this.handleCellClick.bind(this);
+        this.handleCellEdit = this.handleCellEdit.bind(this);
     }
 
     emptyData(data) {
         return data.map(row =>
             row.map(cell => cell.startsWith('#') ? cell : cell.substring(1))
         );
+    }
+
+    handleCellClick(row, col) {
+        if (this.state.status === GridSatuses.solved) {
+            return;
+        }
+
+        this.editorElement.current.startEdit(row, col);
     }
 
     handleCellEdit(i, j, letter) {
@@ -47,23 +57,13 @@ export default class Grid extends React.Component {
         this.setState({
             model: model,
             status: GridSatuses.playing
-        });
-    }
-
-    handleCellClick(cell) {
-        if (this.state.status === GridSatuses.solved) {
-            return;
-        }
-
-        unselectAllCells();
-
-        cell.focus();
-        cell.classList.add('selected');
+        }, () => this.props.onStartPlaying());
     }
 
     check() {
         if (JSON.stringify(this.state.model) === JSON.stringify(this.props.data)) {
             this.setState({ status: GridSatuses.solved });
+            this.editorElement.current.stopEdit();
             return true;
         }
 
@@ -76,7 +76,7 @@ export default class Grid extends React.Component {
             model: this.emptyData(this.props.data)
         });
 
-        unselectAllCells();
+        this.editorElement.current.stopEdit();
     }
 
     solve() {
@@ -85,7 +85,7 @@ export default class Grid extends React.Component {
             model: this.emptyData(this.props.data)
         });
 
-        unselectAllCells();
+        this.editorElement.current.stopEdit();
     }
 
     render() {
@@ -95,8 +95,12 @@ export default class Grid extends React.Component {
         );
 
         return (
-            <div className="grid">
-                {rows}
+            <div>
+                <CellEditor ref={this.editorElement} onCellEdit={this.handleCellEdit} />
+
+                <div className="grid">
+                    {rows}
+                </div>
             </div>
         );
     }
