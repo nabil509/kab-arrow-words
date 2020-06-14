@@ -67,27 +67,27 @@ button.general:active {
 }
 
 .icon.help {
-    background: url("./img/help.png") no-repeat;
+    background: url("img/help.png") no-repeat;
 }
 
 .icon.wand {
-    background: url("./img/wand.png") no-repeat;
+    background: url("img/wand.png") no-repeat;
 }
 
 .icon.tick {
-    background: url("./img/tick.png") no-repeat;
+    background: url("img/tick.png") no-repeat;
 }
 
 .icon.arrow-undo {
-    background: url("./img/arrow_undo.png") no-repeat;
+    background: url("img/arrow_undo.png") no-repeat;
 }
 
 .icon.time {
-    background: url("./img/time.png") no-repeat;
+    background: url("img/time.png") no-repeat;
 }
 
 .icon.cross {
-    background: url("./img/cross.png") no-repeat;
+    background: url("img/cross.png") no-repeat;
 }
 
 .backdrop {
