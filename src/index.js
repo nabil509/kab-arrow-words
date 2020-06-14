@@ -13,6 +13,8 @@ import ReactDOM from "react-dom";
 import App from "./Component/App";
 import DATA from "./data";
 
+import './style.css';
+
 const INDEX = Math.floor(Math.random() * DATA.length);
 
 ReactDOM.render(
