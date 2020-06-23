@@ -50,23 +50,26 @@ export default class CellEditor extends React.Component {
     }
 
     handleChange(e) {
+        let row = this.state.row, col = this.state.col;
+
         const value = e.target.value;
         const key = value.charAt(value.length - 1);
+        var special = null;
 
         if (isLetter(key)) {
             const letter = toUpper(key);
             this.setState({ letter: letter });
-
-            let row = this.state.row, col = this.state.col;
             this.props.onCellEdit(row, col, letter);
+        } else if ((key === '_') && (special = toSpecial(this.state.letter))) { // Underscore.
+            e.preventDefault();
+            this.setState({ letter: special });
+            this.props.onCellEdit(row, col, special);
         }
     }
 
     handleKeyDown(e) {
         let row = this.state.row, col = this.state.col;
-
         const key = e.which || e.keyCode;
-        var special = null;
 
         if (key === 8 || key === 46) { // Backspace or Delete.
             e.preventDefault();
@@ -84,10 +87,6 @@ export default class CellEditor extends React.Component {
         } else if (key === 38) { // Arrow Left.
             e.preventDefault();
             triggerClick('cell_' + (row - 1) + '_' + col);
-        } else if ((key === 56) && (special = toSpecial(this.state.letter))) { // Underscore.
-            e.preventDefault();
-            this.setState({ letter: special });
-            this.props.onCellEdit(row, col, special);
         }
     }
 
