@@ -8,7 +8,7 @@
 
 const DATA = [
     [
-        [ '#TIČURANIN TIMELḤANIN¤rb|TAƐEQQAYT¤br', 'T', '#TAYUGA¤rb|XTAREN¤bb', 'S', '#TEKKA-D NNIG¤rr|TGA AḌEBSI¤rb', 'T', 'I', 'F' ],
+        [ '#TIČUṚANIN TIMELḤANIN¤rb|TAƐEQQAYT¤br', 'T', '#TAYUGA¤rb|XTAṚEN¤bb', 'S', '#TEKKA-D NNIG¤rr|TGA AḌEBSI¤rb', 'T', 'I', 'F' ],
         [ 'T', 'I', 'F', 'I', 'R', 'E', 'S', 'T' ],
         [ '#ṬṬES¤rr|AWI I BAB-IS¤br', 'G', 'E', 'N', '#SKER¤bb', 'K', '#N WAYLA¤tt|SEBDEƐ¤bb', 'I' ],
         [ 'E', 'R', 'R', '#ERR TALABA¤rr|AMAN IGELLEN¤bb', 'E', 'L', 'S', '#NNERNI¤tt|TTAƔEN-TEN-ID¤bb' ],
@@ -17,9 +17,9 @@ const DATA = [
         [ 'I', 'Z', 'N', 'A', 'N', '#AẒAR N YILNI¤rr|GEMT AXMUJ¤bb', 'L', 'N' ],
         [ '#IMAYLEN¤tr|SIWEL¤br', 'A', '#ḌERRU¤rr', 'L', 'E', 'F', 'F', 'U' ],
         [ 'I', 'N', 'I', '#AGUMMU AKIWAN¤rr|GGAMI¤bb', 'L', 'L', 'U', 'Z' ],
-        [ '#D AYLA-K¤bb', 'I', '#AMACAHU ...¤rr|YETTAKK ANZI ƔER¤bb', 'A', 'H', 'U', '#ƔEZZIF WAR AẒAR¤bb', 'U' ],
+        [ '#D AYLA-K¤bb', 'I', '#AMACAHU ...¤rr|YETTAKK ANZI ƔER¤bb', 'A', 'H', 'U', '#TIƔṚA N TEƔZI¤bb', 'U' ],
         [ 'I', 'N', 'A', 'G', 'A', 'M', 'E', 'N¤b' ],
-        [ 'K', '#RWAN TALA¤tr|AKKEN KAN ...¤rr', 'M', 'I', '#AMESKAN UNTI¤rr', 'T', 'I', 'D¤t' ]
+        [ 'K', '#ṚWAN TALA¤tr|AKKEN KAN¤rr', 'M', 'I', '#AMESKAN UNTI¤rr', 'T', 'I', 'D¤t' ]
     ]
 ];
 
