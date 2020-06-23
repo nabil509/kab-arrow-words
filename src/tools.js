@@ -40,7 +40,7 @@ export function isLetter(char) {
 }
 
 export function toUpper(char) {
-    return String.fromCharCode(char).toUpperCase();
+    return !char ? '' : char.toUpperCase();
 }
 
 export function toSpecial(char) {

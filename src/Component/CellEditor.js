@@ -23,7 +23,6 @@ export default class CellEditor extends React.Component {
         this.inputElement = React.createRef();
 
         this.handleChange = this.handleChange.bind(this);
-        this.handleKeyPress = this.handleKeyPress.bind(this);
         this.handleKeyDown = this.handleKeyDown.bind(this);
     }
 
@@ -51,18 +50,15 @@ export default class CellEditor extends React.Component {
     }
 
     handleChange(e) {
-        // Use keyPress instead.
-        e.preventDefault();
-    }
+        const value = e.target.value;
+        const key = value.charAt(value.length - 1);
 
-    handleKeyPress(e) {
-        const key = e.which || e.keyCode;
         if (isLetter(key)) {
-            e.preventDefault();
-
             const letter = toUpper(key);
             this.setState({ letter: letter });
-            this.props.onCellEdit(this.state.row, this.state.col, letter);
+
+            let row = this.state.row, col = this.state.col;
+            this.props.onCellEdit(row, col, letter);
         }
     }
 
@@ -72,20 +68,20 @@ export default class CellEditor extends React.Component {
         const key = e.which || e.keyCode;
         var special = null;
 
-        if (key === 8 || key === 46) {
+        if (key === 8 || key === 46) { // Backspace or Delete.
             e.preventDefault();
             this.setState({ letter: '' });
             this.props.onCellEdit(row, col, '');
-        } else if (key === 37) {
+        } else if (key === 37) { // Arrow Up.
             e.preventDefault();
             triggerClick('cell_' + row + '_' + (col - 1));
-        } else if (key === 39) {
+        } else if (key === 39) { // Arrow Down.
             e.preventDefault();
             triggerClick('cell_' + row + '_' + (col + 1));
-        } else if (key === 40) {
+        } else if (key === 40) { // Arrow Right.
             e.preventDefault();
             triggerClick('cell_' + (row + 1) + '_' + col);
-        } else if (key === 38) {
+        } else if (key === 38) { // Arrow Left.
             e.preventDefault();
             triggerClick('cell_' + (row - 1) + '_' + col);
         } else if ((key === 56) && (special = toSpecial(this.state.letter))) { // Underscore.
@@ -116,8 +112,7 @@ export default class CellEditor extends React.Component {
                        value={this.state.letter}
                        ref={this.inputElement}
                        onChange={this.handleChange}
-                       onKeyDown={this.handleKeyDown}
-                       onKeyPress={this.handleKeyPress} />
+                       onKeyDown={this.handleKeyDown} />
             </div>
         );
     }
