@@ -8,7 +8,7 @@
 
 const DATA = [
     [
-        [ '#TIČUṚANIN TIMELḤANIN¤rb|TAƐEQQAYT¤br', 'T', '#TAYUGA¤rb|XTAṚEN¤bb', 'S', '#TEKKA-D NNIG¤rr|TGA AḌEBSI¤rb', 'T', 'I', 'F' ],
+        [ '#TIČUṚANIN TIMELḤANIN¤rb|TAƐEQQAYT¤br', 'T', '#TAYUGA¤rb|XTAṚEN¤bb', 'S', '#ƔERBEL¤rr|EG AḌEBSI¤rb', 'S', 'I', 'F' ],
         [ 'T', 'I', 'F', 'I', 'R', 'E', 'S', 'T' ],
         [ '#ṬṬES¤rr|AWI I BAB-IS¤br', 'G', 'E', 'N', '#SKER¤bb', 'K', '#N WAYLA¤tt|SEBDEƐ¤bb', 'I' ],
         [ 'E', 'R', 'R', '#ERR TALABA¤rr|AMAN IGELLEN¤bb', 'E', 'L', 'S', '#NNERNI¤tt|TTAƔEN-TEN-ID¤bb' ],
