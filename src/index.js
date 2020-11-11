@@ -19,5 +19,10 @@ const INDEX = Math.floor(Math.random() * DATA.length);
 
 ReactDOM.render(
     <App data={DATA[INDEX]} index={INDEX} />,
-    document.getElementById('main_app_container')
+    document.getElementById('container')
+);
+
+ReactDOM.render(
+    <span>{INDEX + 1}</span>,
+    document.getElementById('counter')
 );

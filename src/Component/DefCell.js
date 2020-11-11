@@ -39,7 +39,7 @@ export default class DefCell extends React.Component {
 
             const dirClass = 'dir dir-' + pos;
 
-            return (<div className={textClass} key={index}>{def}<span className={dirClass}>{this.convertArrow(dir)}</span></div>);
+            return (<div className={textClass} key={index}>{def}<div className={dirClass}>{this.convertArrow(dir)}</div></div>);
         });
 
         return (

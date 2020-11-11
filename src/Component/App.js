@@ -24,6 +24,11 @@ class App extends React.Component {
             status: GridSatuses.initial
         };
 
+        this.handleResize = () => this.setState({
+            windowHeight: window.innerHeight,
+            windowWidth: window.innerWidth
+        });
+
         this.gridElement = React.createRef();
         this.chronoElement = React.createRef();
 
@@ -63,6 +68,15 @@ class App extends React.Component {
         this.setState({ status: GridSatuses.playing });
     }
 
+    componentDidMount() {
+        this.handleResize();
+        window.addEventListener('resize', this.handleResize);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.handleResize);
+    }
+
     render() {
         const helpButtons = [{
             label: 'Mdel',
@@ -98,14 +112,12 @@ class App extends React.Component {
 
         return (
             <div className="app">
-                <h2 className="title">AWALEN S YINECCABEN Ṭ° {this.props.index + 1}</h2>
-
                 <div className="actions">
                     <button className="general" onClick={ () => this.setState({ showHelp: true }) }>
                         <span className="icon help">Ilugan</span>
                     </button>
                     <Dialog show={this.state.showHelp}
-                            title="Ilugan"
+                            title="Tallelt"
                             buttons={helpButtons}
                             onClose={ () => this.setState({ showHelp: false }) }>
                         <p>Tibuda n wawalen ara d-tafeḍ deg wurar-a, ttunefkent-d deg texxamin yesɛan ineccaben.
@@ -114,7 +126,7 @@ class App extends React.Component {
                         <ul>
                             <li>Tekki ɣef texxamin tilmawin akken ad taruḍ asekkil i tebɣiḍ. Tzemreḍ ad tselḥuḍ ger texxamin s teqfilin n tnila n unasiw. Sseqdec tiqfilin "←" d "Suppr" ma tebɣiḍ ad tsefḍeḍ isekkilen.</li>
                             <li>Mi tfukkeḍ urar, tekki ɣef "Senqed" ad twaliḍ ma tufiḍ-d akk awalen.</li>
-                            <li>Tzemreḍ ad twaliḍ tifrat melmi i tebɣiḍ s teqfilt "Tifrat" (dacu kan eǧǧ-it i taggara mi ara yebdu yettfuṛu wallaɣ).</li>
+                            <li>Tzemreḍ ad twaliḍ tifrat melmi i tebɣiḍ s teqfilt "Tifrat" (dacu kan eǧǧ-itt i taggara mi ara yebdu yettfuṛu wallaɣ).</li>
                             <li>Tzemreḍ ad talseḍ i wurar melmi i tebɣiḍ s teqfilt "Ales-as". Ɣur-k, ayen akk i turiḍ ad iṛuḥ!</li>
                             <li>Ma ixuṣṣ-ik unasiw, aru akka: e_ = ɛ | c_ = č | d_ = ḍ | g_ = ǧ | h_ = ḥ | q_ = ɣ | r_ = ṛ | s_ = ṣ | z_ = ẓ. Urar kan!</li>
                             <li>Inegzumen n wakud i nesseqdec: "s" d isragen neɣ d tisaɛtin, "d" d tisdidin neɣ ddqayeq, "n" d tasinin neɣ d isugunden.</li>
@@ -129,7 +141,8 @@ class App extends React.Component {
                             disabled={this.state.status === GridSatuses.solved}>
                         <span className="icon tick">Senqed</span>
                     </button>
-                    <Dialog show={this.state.showResult}
+                    <Dialog style={{ width: 400 }}
+                            show={this.state.showResult}
                             title="Asenqed"
                             buttons={checkButtons}
                             onClose={ () => this.setState({ showResult: false }) }>
@@ -147,7 +160,8 @@ class App extends React.Component {
                             disabled={this.state.status === GridSatuses.solved}>
                         <span className="icon wand">Tifrat</span>
                     </button>
-                    <Dialog show={this.state.confirmSolve}
+                    <Dialog style={{ width: 400 }}
+                            show={this.state.confirmSolve}
                             title="Tifrat"
                             buttons={solveButtons}
                             onClose={() => this.setState({ confirmSolve: false })}>
@@ -159,7 +173,10 @@ class App extends React.Component {
                             disabled={this.state.status === GridSatuses.initial}>
                         <span className="icon arrow-undo">Sfeḍ</span>
                     </button>
-                    <Dialog show={this.state.confirmReset}
+
+
+                    <Dialog style={{ width: 400 }}
+                            show={this.state.confirmReset}
                             title="Asfaḍ"
                             buttons={resetButtons}
                             onClose={() => this.setState({ confirmReset: false })}>

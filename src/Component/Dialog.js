@@ -30,7 +30,7 @@ export default class Dialog extends React.Component {
 
         return (
             <div className="backdrop" onClick={this.handleBackdropClick}>
-                <div className="modal">
+                <div className="modal" style={this.props.style}>
                     {this.props.title  &&
                         <div className="modal-header">
                             {this.props.title}
