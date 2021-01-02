@@ -20,6 +20,19 @@ const DATA = [
         [ '#D AYLA-K¤bb', 'I', '#AMACAHU ...¤rr|YETTAKK ANZI ƔER¤bb', 'A', 'H', 'U', '#TIƔṚA N TEƔZI¤bb', 'U' ],
         [ 'I', 'N', 'A', 'G', 'A', 'M', 'E', 'N¤b' ],
         [ 'K', '#ṚWAN TALA¤tr|AKKEN KAN¤rr', 'M', 'I', '#AMESKAN UNTI¤rr', 'T', 'I', 'D¤t' ]
+    ], [
+        [ '#CIC! CIC!¤rb|TISURA N WUGUR¤br', 'T', '#I TIBAWT¤rb|SSALIMT CCƔEL!¤bb', 'U', '#AMESKAN¤rr|ULAMEK ARA YENZ¤bb', 'A', 'T', 'A' ],
+        [ 'T', 'I', 'F', 'R', 'A', 'T', 'I', 'N' ],
+        [ '#N TEWTILT¤rr|HEDṚEN FELL-AK¤br', 'M', 'A', '#TUQQNA¤bb', 'B', '#I UDRUM¤tt|BƔU¤rr|AḌEN MLIḤ¤bb', 'R', 'I' ],
+        [ 'C', 'E', 'K', 'T', 'A', 'N¤r', 'K¤l', '#NADI DEG UQERRU¤tt|UČČIYEN YELHAN¤lb' ],
+        [ '#SKUCBUR¤rr|AZAMUL AKIMAN¤bb', 'C', 'K', 'U', 'N', 'Ṭ', 'U', 'Ḍ' ],
+        [ 'S', 'Q', 'E', 'R', 'D', 'E', 'C', '#SSERFURI TAḌUṬ¤ll|NEGGUMA¤bb' ],
+        [ 'T', 'I', 'M', 'Z', 'U', 'R', 'I', 'N'],
+        [ '#TICEKKUḤIN¤tr|HTUTEK¤rr', 'R', 'T', 'I', '#DDEM UGAR¤rr|NWU¤bb', 'R', 'N', 'U' ],
+        [ 'I', 'R', '#IRIDYUM¤ll|I UFRAN¤bb', 'N', 'Ɣ', '#AẒAR N YINƔI¤ll|ḤESS¤bb', '#CƔEL D¤bb', 'G' ],
+        [ 'G', 'E', 'N', '#ḌLEQ¤ll|BU TMEƔRA¤rr|SƐU (YETTI)¤bb', 'I', 'S', 'L', 'I' ],
+        [ 'A', 'W', 'E', 'L', 'L', 'E', 'H', '#ASKANAY N UBRID¤ll' ],
+        [ '#YEXDEM¤tt|TETTEGRI-RIBEM¤rr', 'T', 'Ɣ', 'E', 'L', 'L', 'I', 'M' ]
     ]
 ];
 
