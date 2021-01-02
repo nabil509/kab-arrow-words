@@ -10,19 +10,20 @@
 
 import React from "react";
 import ReactDOM from "react-dom";
+import Header from "./Component/Header";
+
 import App from "./Component/App";
 import DATA from "./data";
 
 import './app.css';
 
-const INDEX = Math.floor(Math.random() * DATA.length);
-
+var INDEX = Math.floor(Math.random() * DATA.length);
 ReactDOM.render(
-    <App data={DATA[INDEX]} index={INDEX} />,
+    <App index={INDEX} data={DATA} />,
     document.getElementById('container')
 );
 
 ReactDOM.render(
-    <span>{INDEX + 1}</span>,
-    document.getElementById('counter')
+    <Header index={INDEX} max={DATA.length - 1}></Header>,
+    document.getElementById('header')
 );

@@ -16,6 +16,26 @@ body {
     box-shadow: inset 0px 1px 3px 0px #91b8b3;
 }
 
+.header h3 {
+    display: inline-block;
+    margin: auto 90px;
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+.header a {
+    cursor: pointer;
+}
+
+.header a img {
+    vertical-align: middle;
+    height: 35px;
+}
+
+.header a img.disabled {
+    opacity: 0.5;
+}
+
 #container {
     max-width: 700px;
     margin: 0 auto;
@@ -33,8 +53,8 @@ body {
     display: inline-block;
     background-color: azure;
     font-weight: bold;
-    font-size: 0.75em;
-    padding: 8px;
+    font-size: 0.8em;
+    padding: 7px;
     border: 1px solid black;
     margin: 5px;
 }
@@ -63,6 +83,11 @@ button.general:hover {
 button.general:active {
 	position: relative;
 	top: 1px;
+}
+
+button.general:disabled {
+    opacity: 0.6;
+	cursor: not-allowed;
 }
 
 .icon {
@@ -110,6 +135,7 @@ button.general:active {
     border-radius: 5px;
     max-width: 700px;
     margin: 0 auto;
+    color: black;
 }
 
 .modal-header {
@@ -298,6 +324,10 @@ button.general:active {
 
     .header {
         width: 100%;
+    }
+
+    .header h3 {
+        margin: auto 10px;
     }
 
     #container {

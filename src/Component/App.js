@@ -11,6 +11,7 @@ import Chrono from "./Chrono";
 import Dialog from "./Dialog";
 
 import { formatUserTime } from "../tools";
+import Events from "../events";
 
 class App extends React.Component {
     constructor(props) {
@@ -21,7 +22,8 @@ class App extends React.Component {
             confirmReset: false,
             confirmSolve: false,
             showResult: false,
-            status: GridSatuses.initial
+            status: GridSatuses.initial,
+            current: this.props.index
         };
 
         this.handleResize = () => this.setState({
@@ -36,6 +38,8 @@ class App extends React.Component {
         this.handleSolveClick = this.handleSolveClick.bind(this);
         this.handleResetClick = this.handleResetClick.bind(this);
         this.startPlaying = this.startPlaying.bind(this);
+
+        this.handleHeaderMoveClick = this.handleHeaderMoveClick.bind(this);
     }
 
     handleCheckClick() {
@@ -68,13 +72,26 @@ class App extends React.Component {
         this.setState({ status: GridSatuses.playing });
     }
 
+    handleHeaderMoveClick(index) {
+        if (this.state.current === index) {
+            return;
+        }
+
+        this.setState({ current: index, status: GridSatuses.initial });
+        this.chronoElement.current.reset();
+    }
+
     componentDidMount() {
         this.handleResize();
         window.addEventListener('resize', this.handleResize);
+
+        Events.listen('move', 'header', this.handleHeaderMoveClick);
     }
 
     componentWillUnmount() {
         window.removeEventListener('resize', this.handleResize);
+
+        Events.unlisten('move', 'header');
     }
 
     render() {
@@ -114,10 +131,10 @@ class App extends React.Component {
             <div className="app">
                 <div className="actions">
                     <button className="general" onClick={ () => this.setState({ showHelp: true }) }>
-                        <span className="icon help">Ilugan</span>
+                        <span className="icon help">Tallalt</span>
                     </button>
                     <Dialog show={this.state.showHelp}
-                            title="Tallelt"
+                            title="Tallalt"
                             buttons={helpButtons}
                             onClose={ () => this.setState({ showHelp: false }) }>
                         <p>Tibuda n wawalen ara d-tafeḍ deg wurar-a, ttunefkent-d deg texxamin yesɛan ineccaben.
@@ -127,11 +144,11 @@ class App extends React.Component {
                             <li>Tekki ɣef texxamin tilmawin akken ad taruḍ asekkil i tebɣiḍ. Tzemreḍ ad tselḥuḍ ger texxamin s teqfilin n tnila n unasiw. Sseqdec tiqfilin "←" d "Suppr" ma tebɣiḍ ad tsefḍeḍ isekkilen.</li>
                             <li>Mi tfukkeḍ urar, tekki ɣef "Senqed" ad twaliḍ ma tufiḍ-d akk awalen.</li>
                             <li>Tzemreḍ ad twaliḍ tifrat melmi i tebɣiḍ s teqfilt "Tifrat" (dacu kan eǧǧ-itt i taggara mi ara yebdu yettfuṛu wallaɣ).</li>
-                            <li>Tzemreḍ ad talseḍ i wurar melmi i tebɣiḍ s teqfilt "Ales-as". Ɣur-k, ayen akk i turiḍ ad iṛuḥ!</li>
-                            <li>Ma ixuṣṣ-ik unasiw, aru akka: e_ = ɛ | c_ = č | d_ = ḍ | g_ = ǧ | h_ = ḥ | q_ = ɣ | r_ = ṛ | s_ = ṣ | z_ = ẓ. Urar kan!</li>
+                            <li>Tzemreḍ ad talseḍ i wurar melmi i tebɣiḍ s teqfilt "Sfeḍ". Ɣur-k(m), ayen akk i turiḍ ad iṛuḥ!</li>
+                            <li>Ma ixuṣṣ-ik(ikem) unasiw, aru akka: e_ = ɛ | c_ = č | d_ = ḍ | g_ = ǧ | h_ = ḥ | q_ = ɣ | r_ = ṛ | s_ = ṣ | z_ = ẓ. Urar kan!</li>
                             <li>Inegzumen n wakud i nesseqdec: "s" d isragen neɣ d tisaɛtin, "d" d tisdidin neɣ ddqayeq, "n" d tasinin neɣ d isugunden.</li>
                         </ul>
-                        <p>Ma temlaleḍ-d kra n tuccḍa neɣ tebɣiḍ ad aɣ-d-tazneḍ isumar, aru-yaɣ-d tamawt deg GitHub seg yiccer <a href="https://github.com/nabil509/kab-arrow-words/issues" target="_blank">Issues</a> n usenfaṛ neɣ aru-yaɣ-d ɣer "nabil509 at gmail dot com". Atan wurar ɣur-k!</p>
+                        <p>Ma temlaleḍ-d kra n tuccḍa neɣ tebɣiḍ ad aɣ-d-tazneḍ isumar, aru-yaɣ-d tamawt deg GitHub seg yiccer <a href="https://github.com/nabil509/kab-arrow-words/issues" target="_blank">Issues</a> n usenfaṛ neɣ aru-yaɣ-d ɣer "nabil509 at gmail dot com". Atan wurar ɣur-k(m)!</p>
                     </Dialog>
 
                     <Chrono ref={this.chronoElement} />
@@ -174,7 +191,6 @@ class App extends React.Component {
                         <span className="icon arrow-undo">Sfeḍ</span>
                     </button>
 
-
                     <Dialog style={{ width: 400 }}
                             show={this.state.confirmReset}
                             title="Asfaḍ"
@@ -184,7 +200,7 @@ class App extends React.Component {
                     </Dialog>
                 </div>
 
-                <Grid data={this.props.data}
+                <Grid data={this.props.data[this.state.current]}
                       status={GridSatuses.initial}
                       ref={this.gridElement}
                       onStartPlaying={this.startPlaying} />

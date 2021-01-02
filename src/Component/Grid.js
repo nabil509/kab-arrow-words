@@ -15,8 +15,8 @@ export default class Grid extends React.Component {
         super(props);
 
         this.state = {
-            model: this.emptyData(props.data),
-            status: props.status
+            model: this.emptyData(this.props.data),
+            status: this.props.status
         };
 
         this.editorElement = React.createRef();
@@ -86,6 +86,12 @@ export default class Grid extends React.Component {
         });
 
         this.editorElement.current.stopEdit();
+    }
+
+    componentDidUpdate(prevProps) {
+        if (JSON.stringify(this.props.data) !== JSON.stringify(prevProps.data)) {
+            this.reset();
+        }
     }
 
     render() {
