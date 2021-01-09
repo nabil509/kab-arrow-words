@@ -26,16 +26,18 @@ export default class Header extends React.Component {
         this.handlePreviousClick = this.handlePreviousClick.bind(this);
         this.handleNextClick = this.handleNextClick.bind(this);
         this.handleMoveClick = this.handleMoveClick.bind(this);
+        this.handleHashChange = this.handleHashChange.bind(this);
     }
 
     handleMoveClick(e) {
-        console.log(this.state.selected);
         const selected = this.state.selected;
 
-        if (selected < 0) {
-            console.log('No selected index.');
+        if ((selected < 0) || (selected > this.props.max)) {
+            console.log('Selected index is out of bounds.');
             return;
         }
+
+        window.location.hash = '#' + (selected + 1);
 
         this.setState({ current: selected, selected: -1, confirmMove: false });
         Events.trigger('move', selected);
@@ -60,6 +62,24 @@ export default class Header extends React.Component {
         this.move(index);
     }
 
+    handleHashChange(e) {
+        var hash = window.location.hash ? window.location.hash.substring(1) : -1;
+
+        if ((hash > 0) && (hash <= this.props.max + 1) && (hash != this.state.current + 1)) {
+            this.move(hash - 1);
+        } else if (hash != this.state.current + 1) {
+            window.location.hash = '#' + (this.state.current + 1);
+        }
+    }
+
+    componentDidMount() {
+        window.addEventListener('hashchange', this.handleHashChange);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('hashchange', this.handleHashChange);
+    }
+
     render() {
         const moveButtons = [{
             label: 'Ih',
@@ -77,7 +97,7 @@ export default class Header extends React.Component {
         return (
             <span>
                 <a title="Ar deffir" onClick={this.handlePreviousClick}><img src={previousIcon} className={disablePreviousClassName} /></a>
-                <h3>AWALEN S YINECCABEN T° {this.state.current + 1}</h3>
+                <h3>AWALEN S TNECCABIN T° {this.state.current + 1}</h3>
                 <a title="Ar zdat" onClick={this.handleNextClick}><img src={nextIcon} className={disableNextClassName} /></a>
 
                 <Dialog style={{ width: 400 }}

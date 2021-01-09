@@ -17,13 +17,21 @@ import DATA from "./data";
 
 import './app.css';
 
-var INDEX = Math.floor(Math.random() * DATA.length);
+var INDEX = DATA.length; // By default, open the last grid.
+
+var hash = window.location.hash ? window.location.hash.substring(1) : -1;
+if ((hash > 0) && (hash <= INDEX)) {
+    INDEX = hash; // Load grid passed in hash.
+}
+
+INDEX--; // Real array index.
+
 ReactDOM.render(
     <App index={INDEX} data={DATA} />,
     document.getElementById('container')
 );
 
 ReactDOM.render(
-    <Header index={INDEX} max={DATA.length - 1}></Header>,
+    <Header index={INDEX} max={DATA.length - 1} />,
     document.getElementById('header')
 );

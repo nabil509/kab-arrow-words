@@ -137,9 +137,9 @@ class App extends React.Component {
                             title="Tallalt"
                             buttons={helpButtons}
                             onClose={ () => this.setState({ showHelp: false }) }>
-                        <p>Tibuda n wawalen ara d-tafeḍ deg wurar-a, ttunefkent-d deg texxamin yesɛan ineccaben.
-                        Awalen ilaq ad ttwarun seg uzelmaḍ ar uyeffus neɣ seg usawen ar ukessar ɣas ma yella
-                        uneccab-nsen iwehha ɣer tama tanmeglant.</p>
+                        <p>Tibuda n wawalen ara d-tafeḍ deg wurar-a, ttunefkent-d deg texxamin yesɛan tineccabin.
+                        Awalen ilaq ad ttwarun seg uzelmaḍ ar uyeffus neɣ seg usawen ar ukessar ɣas ma tella
+                        tneccabt-nsen twehha ɣer tama tanmeglant.</p>
                         <ul>
                             <li>Tekki ɣef texxamin tilmawin akken ad taruḍ asekkil i tebɣiḍ. Tzemreḍ ad tselḥuḍ ger texxamin s teqfilin n tnila n unasiw. Sseqdec tiqfilin "←" d "Suppr" ma tebɣiḍ ad tsefḍeḍ isekkilen.</li>
                             <li>Mi tfukkeḍ urar, tekki ɣef "Senqed" ad twaliḍ ma tufiḍ-d akk awalen.</li>
