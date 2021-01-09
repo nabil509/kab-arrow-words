@@ -8,7 +8,7 @@
 
 const DATA = [
     [
-        [ '#TIČUṚANIN TIMELḤANIN¤rb|TAƐEQQAYT¤br', 'T', '#TAYUGA¤rb|XTAṚEN¤bb', 'S', '#ƔERBEL¤rr|EG AḌEBSI¤rb', 'S', 'I', 'F' ],
+        [ '#TIČUṚANIN TIMELḤANIN¤rb|TAƐEQQAYT¤br', 'T', '#TAYUGA¤rb|XTAṚEN¤bb', 'S', '#ƔERBEL¤rr|SSUFEƔ-D AḌEBSI¤rb', 'S', 'I', 'F' ],
         [ 'T', 'I', 'F', 'I', 'R', 'E', 'S', 'T' ],
         [ '#ṬṬES¤rr|AWI I BAB-IS¤br', 'G', 'E', 'N', '#SKER¤bb', 'K', '#N WAYLA¤tt|SEBDEƐ¤bb', 'I' ],
         [ 'E', 'R', 'R', '#ERR TALABA¤rr|AMAN IGELLEN¤bb', 'E', 'L', 'S', '#NNERNI¤tt|TTAƔEN-TEN-ID¤bb' ],
@@ -21,15 +21,15 @@ const DATA = [
         [ 'I', 'N', 'A', 'G', 'A', 'M', 'E', 'N¤b' ],
         [ 'K', '#ṚWAN TALA¤tr|AKKEN KAN¤rr', 'M', 'I', '#AMESKAN UNTI¤rr', 'T', 'I', 'D¤t' ]
     ], [
-        [ '#CIC! CIC!¤rb|TISURA N WUGUR¤br', 'T', '#I TIBAWT¤rb|SSALIMT CCƔEL!¤bb', 'U', '#AMESKAN¤rr|ULAMEK ARA YENZ¤bb', 'A', 'T', 'A' ],
+        [ '#CIC! CIC!¤rb|TISURA N WUGUR¤br', 'T', '#I TIBAWT¤rb|KFUMT¤bb', 'U', '#AMESKAN¤rr|ULAMEK ARA YENZ¤bb', 'A', 'T', 'A' ],
         [ 'T', 'I', 'F', 'R', 'A', 'T', 'I', 'N' ],
-        [ '#N TEWTILT¤rr|HEDṚEN FELL-AK¤br', 'M', 'A', '#TUQQNA¤bb', 'B', '#I UDRUM¤tt|BƔU¤rr|AḌEN MLIḤ¤bb', 'R', 'I' ],
+        [ '#N TEWTILT¤rr|HEDṚEN FELL-AK¤br', 'M', 'A', '#TUQQNA¤bb', 'B', '#N UDRUM¤tt|BƔU¤rr|AḌEN MLIḤ¤bb', 'R', 'I' ],
         [ 'C', 'E', 'K', 'T', 'A', 'N¤r', 'K¤l', '#NADI DEG UQERRU¤tt|UČČIYEN YELHAN¤lb' ],
         [ '#SKUCBUR¤rr|AZAMUL AKIMAN¤bb', 'C', 'K', 'U', 'N', 'Ṭ', 'U', 'Ḍ' ],
         [ 'S', 'Q', 'E', 'R', 'D', 'E', 'C', '#SSERFURI TAḌUṬ¤ll|NEGGUMA¤bb' ],
         [ 'T', 'I', 'M', 'Z', 'U', 'R', 'I', 'N'],
-        [ '#TICEKKUḤIN¤tr|HTUTEK¤rr', 'R', 'T', 'I', '#DDEM UGAR¤rr|NWU¤bb', 'R', 'N', 'U' ],
-        [ 'I', 'R', '#IRIDYUM¤ll|I UFRAN¤bb', 'N', 'Ɣ', '#AẒAR N YINƔI¤ll|ḤESS¤bb', '#CƔEL D¤bb', 'G' ],
+        [ '#TICEKKUḤIN I D-YEƔLIN¤tr|HTUTEK¤rr', 'R', 'T', 'I', '#DDEM UGAR¤rr|NWU¤bb', 'R', 'N', 'U' ],
+        [ 'I', 'R', '#AZAMUL N IRIDYUM¤ll|I UFRAN¤bb', 'N', 'Ɣ', '#AẒAR N YINƔI¤ll|ḤESS¤bb', '#CƔEL D¤bb', 'G' ],
         [ 'G', 'E', 'N', '#ḌLEQ¤ll|BU TMEƔRA¤rr|SƐU (YETTI)¤bb', 'I', 'S', 'L', 'I' ],
         [ 'A', 'W', 'E', 'L', 'L', 'E', 'H', '#ASKANAY N UBRID¤ll' ],
         [ '#YEXDEM¤tt|TETTEGRI-RIBEM¤rr', 'T', 'Ɣ', 'E', 'L', 'L', 'I', 'M' ]
