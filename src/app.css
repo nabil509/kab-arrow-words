@@ -231,7 +231,7 @@ button.general:disabled {
 .def {
     font-size: 0.6em;
     background-color: rgba(241,240,235,.8);
-    cursor: pointer;
+    cursor: none;
 }
 
 .def .text {
@@ -292,12 +292,17 @@ button.general:disabled {
 .selected input {
     background: none;
     border: none;
-    height: 56px;
-    width: 56px;
+    padding: 1px;
+    height: 54px;
+    width: 54px;
     text-align: center;
     color: transparent;
     font-size: 2em;
     font-weight: bold;
+}
+
+.selected input:focus {
+    outline: none;
 }
 
 .footer {

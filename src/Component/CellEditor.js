@@ -98,8 +98,8 @@ export default class CellEditor extends React.Component {
         // Place cell editor component on focused cell.
         let pos = offset(this.state.elt);
         const editorWrapperStyle = {
-            top: pos.top + 'px',
-            left: pos.left + 'px'
+            top: (pos.top + 1) + 'px',
+            left: (pos.left + 1) + 'px'
         };
 
         return (
@@ -107,6 +107,7 @@ export default class CellEditor extends React.Component {
                 <input type="text"
                        name="editor"
                        autoComplete="off"
+                       spellCheck="false"
                        value={this.state.letter}
                        ref={this.inputElement}
                        onChange={this.handleChange}
