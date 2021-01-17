@@ -145,7 +145,7 @@ class App extends React.Component {
                             <li>Mi tfukkeḍ urar, tekki ɣef "Senqed" ad twaliḍ ma tufiḍ-d akk awalen.</li>
                             <li>Tzemreḍ ad twaliḍ tifrat melmi i tebɣiḍ s teqfilt "Tifrat" (dacu kan eǧǧ-itt i taggara mi ara yebdu yettfuṛu wallaɣ).</li>
                             <li>Tzemreḍ ad talseḍ i wurar melmi i tebɣiḍ s teqfilt "Sfeḍ". Ɣur-k(m), ayen akk i turiḍ ad iṛuḥ!</li>
-                            <li>Ma ixuṣṣ-ik(ikem) unasiw, aru akka: e_ = ɛ | c_ = č | d_ = ḍ | g_ = ǧ | h_ = ḥ | q_ = ɣ | r_ = ṛ | s_ = ṣ | z_ = ẓ. Urar kan!</li>
+                            <li>Ma ixuṣṣ-ik(ikem) unasiw, aru akka: E + &bull; = Ɛ / C + &bull; = Č / D + &bull; = Ḍ / G + &bull; = Ǧ / H + &bull; = Ḥ / Q + &bull; = Ɣ / R + &bull; = Ṛ / S + &bull; = Ṣ / Z + &bull; = Ẓ. Urar kan!</li>
                             <li>Inegzumen n wakud i nesseqdec: "s" d isragen neɣ d tisaɛtin, "d" d tisdidin neɣ ddqayeq, "n" d tasinin neɣ d isugunden.</li>
                         </ul>
                         <p>Ma temlaleḍ-d kra n tuccḍa neɣ tebɣiḍ ad aɣ-d-tazneḍ isumar, aru-yaɣ-d tamawt deg GitHub seg yiccer <a href="https://github.com/nabil509/kab-arrow-words/issues" target="_blank">Issues</a> n usenfaṛ neɣ aru-yaɣ-d ɣer "nabil509 at gmail dot com". Atan wurar ɣur-k(m)!</p>

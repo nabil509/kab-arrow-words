@@ -60,7 +60,7 @@ export default class CellEditor extends React.Component {
             const letter = toUpper(key);
             this.setState({ letter: letter });
             this.props.onCellEdit(row, col, letter);
-        } else if ((key === '_') && (special = toSpecial(this.state.letter))) { // Underscore.
+        } else if ((key === '_' || key === '.') && (special = toSpecial(this.state.letter))) { // Underscore.
             this.setState({ letter: special });
             this.props.onCellEdit(row, col, special);
         }
