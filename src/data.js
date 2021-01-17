@@ -45,7 +45,7 @@ const DATA = [
         [ '#WEHMEƔ¤rr|UƔAL D AMAN¤bb', 'B', 'E', 'H', 'T', 'E', 'Ɣ', '#TASƔUNT N TMENTILT¤bb' ],
         [ 'F', 'E', 'N', 'A', '#EǦǦ (YETTI)¤ll|CEṚṚEƐ¤rr|I USIWEL¤bb', 'L', 'D', 'I' ],
         [ 'S', 'N', '#SIN SEG SIN¤ll|AD NXIḌ ABRUƐ (AD)¤rr', 'N', 'A', 'L', 'E', 'M' ],
-        [ 'I', 'T', 'T', '#AMQIM UNTI (YETTI)¤ll|INUDA TILKIN¤rr', 'Y', 'U', 'N', 'I' ]
+        [ 'I', 'T', 'T', '#AMQIM UNTI¤ll|INUDA TILKIN¤rr', 'Y', 'U', 'N', 'I' ]
     ]
 ];
 
