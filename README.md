@@ -4,7 +4,7 @@ This web application offers to play arrow words in Kabyle language. You can play
 
 ### How to play?
 
-Click on empty cells to enter letters. You can move through cells with keyboard direction keys and delete letters with "←" and "Delete" keys. You can use these shortcuts to enter Kabyle special characters: e_ = ɛ | c_ = č | d_ = ḍ | g_ = ǧ | h_ = ḥ | q_ = ɣ | r_ = ṛ | s_ = ṣ | z_ = ẓ. Try to fill the grid in a record time!
+Click on empty cells to enter letters. You can move through cells with keyboard direction keys and delete letters with "←" and "Delete" keys. You can use these shortcuts to enter Kabyle special characters: E + • = Ɛ / C + • = Č / D + • = Ḍ / G + • = Ǧ / H + • = Ḥ / Q + • = Ɣ / R + • = Ṛ / S + • = Ṣ / Z + • = Ẓ. Try to fill the grid in a record time!
 
 ### Credits
 
