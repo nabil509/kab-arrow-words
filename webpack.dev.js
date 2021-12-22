@@ -1,16 +1,26 @@
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
 const webpack = require('webpack');
+const path = require('path');
 
 module.exports = merge(common, {
   devtool: 'inline-source-map',
   mode: 'development',
   devServer: {
-    host: '0.0.0.0',
     port: 3000,
-    publicPath: '/assets/',
-    hotOnly: true,
-    overlay: true
-  },
-  plugins: [ new webpack.HotModuleReplacementPlugin() ]
+    hot: true,
+    client: {
+      logging: 'verbose',
+      overlay: true
+    },
+    static: [{
+      directory: path.join(__dirname, ''),
+      publicPath: '/'
+    }],
+    devMiddleware: {
+      index: false,
+      publicPath: '/assets',
+      writeToDisk: true
+    }
+  }
 });

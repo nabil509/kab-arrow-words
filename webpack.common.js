@@ -9,7 +9,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'assets/'),
     publicPath: 'assets/',
-    filename: '[name].js'
+    filename: '[name].js',
+    assetModuleFilename: 'img/[name][ext]'
   },
   module: {
     rules: [
@@ -37,15 +38,11 @@ module.exports = {
               sourceMap: true
             }
           }
-        ],
+        ]
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]',
-          outputPath: 'img/'
-        }
+        type: 'asset/resource'
       }
     ]
   },
