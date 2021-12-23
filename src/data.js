@@ -46,6 +46,19 @@ const DATA = [
         [ 'F', 'E', 'N', 'A', '#EǦǦ (YETTI)¤ll|CEṚṚEƐ¤rr|I USIWEL¤bb', 'L', 'D', 'I' ],
         [ 'S', 'N', '#SIN SEG SIN¤ll|AD NXIḌ ABRUƐ (AD)¤rr', 'N', 'A', 'L', 'E', 'M' ],
         [ 'I', 'T', 'T', '#AMQIM UNTI¤ll|INUDA TILKIN¤rr', 'Y', 'U', 'N', 'I' ]
+    ], [
+        [ '#TAMEƔRA N WUCCEN¤rb|LSAS N TUGDUT¤br', 'T', '#QQAR SEG USEMMIḌ¤rb|ṚUḤ ƔER BEṚṚA¤bb', 'G', '#ANNERNI N TMES¤rb|ALAMMA¤bb', 'A', '#SANI I YERRA?¤rb|TIƔRA¤bb', 'A' ],
+        [ 'T', 'I', 'F', 'R', 'A', 'N', 'I', 'N' ],
+        [ '#NADI I ṬṬLAM¤rr|... UR YESƐI IƔSAN¤br', 'S', 'F', 'E', 'R', 'F', 'E', 'D' ],
+        [ 'I', 'L', 'E', 'S', '#TAMA¤bb', 'U', '#ITTEDDU D "ARA"¤bb', 'A¤b' ],
+        [ '#AZGEN N YIƔIL¤rr|NETTA ASEMMAD¤br', 'I', 'Ɣ', '#IƐEDDA LḤAL¤rr|TAFRUT¤bb', 'I', 'F', 'U', 'T¤t' ],
+        [ 'I', 'T¤b', '#ṢUBB¤rr|TIKWAL YETTAF-D¤bb', 'A', 'D', 'E', 'R', '#TUBBƔA DEG USEQQI¤bb' ],
+        [ '#NDEH-D S¤rr|YELLUFḌI¤br', 'N¤t¤b', 'A', 'J', 'I¤r', 'D¤l', '#AǦEW¤bb', 'A' ],
+        [ 'Y', 'U¤t', 'M', 'E', 'S', '#RZU¤rr|TAZELƔA N TNILA¤bb', 'A', 'S' ],
+        [ '#TARGELT 3 N TIKKAL¤rr|LMUZIGA¤br', 'N', 'N', 'N', '#AYEFKI YENDAN¤rr|SEFRU-D¤bb', 'I', 'Ɣ', 'I' ],
+        [ 'A', 'Ẓ', 'A', 'W', 'A', 'N', '#TAZMILT N UẒAWAN¤bb', 'S' ],
+        [ '#DEG YIƔES¤rr|ṬṬERF¤br', 'A', 'D', 'I', 'F¤b', '#UL N YIFERR¤rr', 'F', 'E' ],
+        [ 'I', 'R', 'I', '#RZAN ƔER (... ƔEF)¤rr', 'D¤t', 'L', 'A', 'N' ]
     ]
 ];
 
