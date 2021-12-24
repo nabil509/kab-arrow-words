@@ -53,7 +53,7 @@ const DATA = [
         [ 'I', 'L', 'E', 'S', '#TAMA¤bb', 'U', '#ITTEDDU D "ARA"¤bb', 'A¤b' ],
         [ '#AZGEN N YIƔIL¤rr|NETTA ASEMMAD¤br', 'I', 'Ɣ', '#IƐEDDA LḤAL¤rr|TAFRUT¤bb', 'I', 'F', 'U', 'T¤t' ],
         [ 'I', 'T¤b', '#ṢUBB¤rr|TIKWAL YETTAF-D¤bb', 'A', 'D', 'E', 'R', '#TUBBƔA DEG USEQQI¤bb' ],
-        [ '#NDEH-D S¤rr|YELLUFḌI¤br', 'N¤t¤b', 'A', 'J', 'I¤r', 'D¤l', '#AǦEW¤bb', 'A' ],
+        [ '#NDEH-D S¤rr|YELLUFḌI¤br', 'N¤tb', 'A', 'J', 'I¤r', 'D¤l', '#AǦEW¤bb', 'A' ],
         [ 'Y', 'U¤t', 'M', 'E', 'S', '#RZU¤rr|TAZELƔA N TNILA¤bb', 'A', 'S' ],
         [ '#TARGELT 3 N TIKKAL¤rr|LMUZIGA¤br', 'N', 'N', 'N', '#AYEFKI YENDAN¤rr|SEFRU-D¤bb', 'I', 'Ɣ', 'I' ],
         [ 'A', 'Ẓ', 'A', 'W', 'A', 'N', '#TAZMILT N UẒAWAN¤bb', 'S' ],
