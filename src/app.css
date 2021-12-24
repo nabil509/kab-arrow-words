@@ -189,6 +189,7 @@ button.general:disabled {
 }
 
 .cell {
+    caret-color: transparent;
     display: table-cell;
     border: 1px solid #999;
     width: 60px;
@@ -228,10 +229,14 @@ button.general:disabled {
     border-bottom-style: dashed !important;
 }
 
+.wrong {
+    color: red;
+}
+
 .def {
     font-size: 0.6em;
     background-color: rgba(241,240,235,.8);
-    cursor: none;
+    cursor: default;
 }
 
 .def .text {
