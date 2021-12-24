@@ -31,6 +31,35 @@ export default class Grid extends React.Component {
         );
     }
 
+    markWrongData() {
+        let model = this.state.model;
+
+        model.forEach((row, i) => {
+            row.forEach((cell, j) => {
+                if (cell.startsWith('#')) {
+                    // Def cell, do nothing.
+                    return;
+                }
+
+                // Unmark error.
+                if (cell.indexOf('¤w') !== -1) {
+                    model[i][j] = cell = cell.replace('¤w', '');
+                }
+
+                if (!cell || (cell.indexOf('¤') === 0)) {
+                    // Empty cell, do nothing.
+                    return;
+                }
+
+                if (cell.substring(0, 1) !== this.props.data[i][j].substring(0, 1)) {
+                    model[i][j] += '¤w';
+                }
+            });
+        });
+
+        this.setState({ model: model });
+    }
+
     handleCellClick(row, col) {
         if (this.state.status === GridSatuses.solved) {
             return;
@@ -46,9 +75,13 @@ export default class Grid extends React.Component {
 
         let model = this.state.model;
 
+        if (model[i][j].indexOf('¤w') !== -1) {
+            model[i][j] = model[i][j].replace('¤w', '');
+        }
+
         let border = '';
         const pos = model[i][j].indexOf('¤');
-        if (pos != -1) {
+        if (pos !== -1) {
             border = model[i][j].substring(pos);
         }
 
@@ -67,6 +100,7 @@ export default class Grid extends React.Component {
             return true;
         }
 
+        this.markWrongData();
         return false;
     }
 

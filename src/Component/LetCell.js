@@ -23,13 +23,20 @@ export default class LetCell extends React.Component {
         let className = 'cell let';
         const id = 'cell_' + this.props.row + '_' + this.props.col;
 
-        let letter = this.props.content;
+        let content = this.props.content;
         let border = null;
 
-        const pos = this.props.content.indexOf('¤');
-        if (pos != -1) {
-            letter = this.props.content.substring(0, pos);
-            border = this.props.content.substring(pos + 1);
+        if (content.indexOf('¤w') !== -1) {
+            className += ' wrong';
+            content = content.replace('¤w', ''); // Delete managed wrongness mark.
+        }
+
+        let letter = content;
+
+        const pos = content.indexOf('¤');
+        if (pos !== -1) {
+            letter = content.substring(0, pos);
+            border = content.substring(pos + 1);
         }
 
         if (border) {
