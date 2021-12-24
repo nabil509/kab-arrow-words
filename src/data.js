@@ -47,9 +47,9 @@ const DATA = [
         [ 'S', 'N', '#SIN SEG SIN¤ll|AD NXIḌ ABRUƐ (AD)¤rr', 'N', 'A', 'L', 'E', 'M' ],
         [ 'I', 'T', 'T', '#AMQIM UNTI¤ll|INUDA TILKIN¤rr', 'Y', 'U', 'N', 'I' ]
     ], [
-        [ '#TAMEƔRA N WUCCEN¤rb|LSAS N TUGDUT¤br', 'T', '#QQAR SEG USEMMIḌ¤rb|ṚUḤ ƔER BEṚṚA¤bb', 'G', '#ANNERNI N TMES¤rb|ALAMMA¤bb', 'A', '#SANI I YERRA?¤rb|TIƔRA¤bb', 'A' ],
+        [ '#TAMEƔRA WUCCEN¤rb|LSAS N TUGDUT¤br', 'T', '#QQAR SEG USEMMIḌ¤rb|ṚUḤ ƔER BEṚṚA¤bb', 'G', '#ANNERNI N TMES¤rb|ALAMMA¤bb', 'A', '#SANI I YERRA?¤rb|TIƔRA¤bb', 'A' ],
         [ 'T', 'I', 'F', 'R', 'A', 'N', 'I', 'N' ],
-        [ '#NADI I ṬṬLAM¤rr|... UR YESƐI IƔSAN¤br', 'S', 'F', 'E', 'R', 'F', 'E', 'D' ],
+        [ '#NADI I ṬṬLAM¤rr|UR YESƐI IƔES¤br', 'S', 'F', 'E', 'R', 'F', 'E', 'D' ],
         [ 'I', 'L', 'E', 'S', '#TAMA¤bb', 'U', '#ITTEDDU D "ARA"¤bb', 'A¤b' ],
         [ '#AZGEN N YIƔIL¤rr|NETTA ASEMMAD¤br', 'I', 'Ɣ', '#IƐEDDA LḤAL¤rr|TAFRUT¤bb', 'I', 'F', 'U', 'T¤t' ],
         [ 'I', 'T¤b', '#ṢUBB¤rr|TIKWAL YETTAF-D¤bb', 'A', 'D', 'E', 'R', '#TUBBƔA DEG USEQQI¤bb' ],
