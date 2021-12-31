@@ -1,4 +1,4 @@
-Copyright © 2020 nabil509.
+Copyright © 2020-2022 nabil509.
 
 Kabyle Arrow Words Game is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
