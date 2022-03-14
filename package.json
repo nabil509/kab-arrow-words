@@ -1,6 +1,6 @@
 {
   "name": "kab-arrow-words",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Application that offers to play arrow words in Kabyle language.",
   "private": true,
   "scripts": {
