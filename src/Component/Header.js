@@ -97,7 +97,7 @@ export default class Header extends React.Component {
         return (
             <span>
                 <a title="Ar deffir" onClick={this.handlePreviousClick}><img src={previousIcon} className={disablePreviousClassName} /></a>
-                <h3>AWALEN S TNECCABIN T° {this.state.current + 1}</h3>
+                <h3>AWALEN S TNECCABIN Ṭ° {this.state.current + 1}</h3>
                 <a title="Ar zdat" onClick={this.handleNextClick}><img src={nextIcon} className={disableNextClassName} /></a>
 
                 <Dialog style={{ width: 400 }}
