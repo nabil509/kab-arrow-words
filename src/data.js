@@ -85,6 +85,19 @@ const DATA = [
         [ 'I', 'M', 'E', 'R', 'G', 'A', '#ALAMMA D¤bb', 'U' ],
         [ '#ALEGGAƔ¤rr|BEDDEL S UDRIM¤br', 'A', 'Z', 'R', 'I', 'R', 'A', 'N' ],
         [ 'E', 'N', 'Z', '#SƐIƔ¤rr', 'Ɣ', 'U', 'R¤r', 'I¤l' ]
+    ], [
+        [ '#TIQSIḌIN¤rb|TIKAṚNIYIN¤br', 'T', '#AQEMMUC¤rb|ƔERQEN¤bb', 'I', '#INEM¤rb|AMESKAN¤bb', 'I', '#SEWJED TISEGNIT¤rb|YEṚWA IBERDAN¤bb', 'S' ],
+        [ 'T', 'I', 'Z', 'M', 'A', 'M', 'I', 'N' ],
+        [ '#SMESDET¤rr|AR¤br', 'M', 'Z', 'I', 'T', '#ASMI¤rr|UMSENT TMEDWA¤bb', 'M', 'I' ],
+        [ 'Ɣ', 'U', 'R', '#RUḤ D ASAWEN¤rr|TAMEṬṬUT N DDA¤bb', 'A', 'L', 'I', '#TIRGALIN N TASA¤bb' ],
+        [ '#TTƔENNINT¤rr|QIL¤br', 'C', 'E', 'N', 'N', 'U', 'N', 'T' ],
+        [ 'Ḥ', 'U', 'N', 'N', '#ṚUḤ DEG-SENT¤rr|NUDDEM¤bb', 'Ɣ', 'I', 'S' ],
+        [ '#TIƔRA N TALABA¤br', 'H', '#FERFER¤rr|AQERRIF¤bb', 'A', 'F', 'E', 'G', '#LEḤMU N UMUḌIN¤bb'],
+        [ 'A', 'A¤b', 'A', '#DEG S TEGLIZIT¤rr|TIƔRA N YIZEM¤bb', 'I', 'N', '#QQIMET DEFFIR¤bb', 'T' ],
+        [ '#QIṬṬER¤rr|BU TSUQAS¤br', 'N¤t¤b', 'G', 'I', '#TEXDEM¤rr|KNU, QQEL ƔER TAMA¤bb', 'T', 'G', 'A' ],
+        [ 'A', 'Z¤t', 'R', 'E', 'M', '#AẒAR N RWI¤rr', 'R', 'W' ],
+        [ '#SIN N ṚṚUMAN¤rr|ISEM N UMAZIƔ¤br', 'I', 'I', '#ƔUR-S I YEṬṬEF UFUS¤rr', 'I', 'Ɣ', 'I', 'L' ],
+        [ 'A', 'K', 'S', 'I', 'L', '#UNTI N WA¤rr', 'T', 'A' ]
     ]
 ];
 
